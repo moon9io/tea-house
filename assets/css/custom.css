@@ -1,0 +1,60 @@
+/* Hero Background Styling */
+.hero-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: url('/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+}
+
+/* Rain Effect Container */
+#rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.drop {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    width: 1px;
+    height: 50px;
+    top: -50px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* RTL Adjustments for Arabic */
+[dir="rtl"] .text-left {
+    text-align: right;
+}
+
+[dir="rtl"] .ml-auto {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/* Profile Image Styling */
+.profile-img {
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}

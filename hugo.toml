@@ -1,0 +1,102 @@
+baseURL = "https://moon9io.github.io/tea-house/"
+title = "Tea House"
+theme = "blowfish"
+defaultContentLanguage = "ar"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[languages]
+  [languages.ar]
+    languageName = "العربية"
+    languageCode = "ar"
+    contentDir = "content/ar"
+    weight = 1
+    title = "بيت الشاي"
+    [languages.ar.params]
+      description = "مدونة احترافية تجمع بين الهدوء والتقنية"
+      displayName = "العربية"
+      isoCode = "ar"
+      rtl = true
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    contentDir = "content/en"
+    weight = 2
+    title = "Tea House"
+    [languages.en.params]
+      description = "A professional blog blending tranquility and technology"
+      displayName = "English"
+      isoCode = "en-US"
+      rtl = false
+
+[params]
+  colorScheme = "blowfish"
+  # SEO & Social
+  description = "Tea House - A sanctuary for tech and peace"
+  images = ["images/og-image.jpg"]
+  
+  # Analytics (Optional)
+  # googleAnalytics = "G-XXXXXXXXXX"
+
+  # Extra Features
+  showTaxonomies = ["tags", "categories"]
+  showBreadcrumbs = true
+  showTableOfContents = true
+
+  defaultAppearance = "dark" # Default to dark mode for the rain effect aesthetic
+  autoSwitchAppearance = true
+  showScrollToTop = true
+  mainSections = ["posts"]
+  
+  # Profile settings
+  [params.author]
+    name = "Tea Master"
+    image = "images/profile.jpg"
+    headline = "Stay Good"
+    links = [
+      { telegram = "https://t.me/yourlink" },
+      { discord = "https://discord.gg/yourlink" },
+      { github = "https://github.com/yourusername" }
+    ]
+
+  # Article features
+  [params.article]
+    showDate = true
+    showViews = true
+    showReadingTime = true
+    showTags = true
+    showRelatedPosts = true
+    showLightbox = true
+
+  # Search
+  [params.search]
+    enable = true
+    type = "fuse"
+    showInMobileMenu = true
+
+  # Giscus Comments
+  [params.giscus]
+    enable = true
+    repo = "yourusername/tea-house"
+    repoId = "YOUR_REPO_ID"
+    category = "Announcements"
+    categoryId = "YOUR_CATEGORY_ID"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    theme = "preferred_color_scheme"
+    lang = "en"
+    loading = "lazy"
+
+  # Buy Me a Coffee
+  [params.buymeacoffee]
+    enable = true
+    identifier = "yourusername"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
