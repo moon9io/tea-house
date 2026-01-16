@@ -51,7 +51,7 @@ hasCJKLanguage = true
   # Homepage
   [params.homepage]
     layout = "background"
-    homepageImage = "https://images.alphacoders.com/133/1331841.png" # Frieren Background
+    homepageImage = ""
     showRecent = true
     showRecentItems = 6
     cardView = true # Enable Grid/Card layout

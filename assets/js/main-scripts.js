@@ -76,11 +76,29 @@ function updateGreeting() {
     greetingEl.innerText = msg;
 }
 
+function showAchievement(name) {
+    const toast = document.getElementById('achievement-toast');
+    const nameEl = document.getElementById('achievement-name');
+    if (!toast || !nameEl) return;
+    nameEl.innerText = name;
+    toast.style.right = '30px';
+    setTimeout(() => toast.style.right = '-300px', 5000);
+}
+
 function initAll() {
     createRain();
     initAudio();
     handleImages();
     updateGreeting();
+    
+    // Show achievement on first click
+    document.addEventListener('click', () => {
+        if (!localStorage.getItem('ach_first_click')) {
+            showAchievement('أول تعويذة سحرية!');
+            localStorage.setItem('ach_first_click', 'true');
+        }
+    }, { once: true });
+
     window.addEventListener('scroll', updateReadingProgress);
     document.addEventListener('click', createPetal);
     
