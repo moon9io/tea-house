@@ -3,15 +3,15 @@ title = "Tea House"
 theme = "blowfish"
 defaultContentLanguage = "ar"
 enableEmoji = true
-hasCJKLanguage = true # Better support for mixed languages
+hasCJKLanguage = true
 
 [pagination]
-  pagerSize = 10
+  pagerSize = 12
 
-# Taxonomies
 [taxonomies]
   tag = "tags"
   category = "categories"
+  author = "authors"
   series = "series"
 
 [languages]
@@ -50,10 +50,11 @@ hasCJKLanguage = true # Better support for mixed languages
   
   # Homepage
   [params.homepage]
-    showRecent = true
-    showRecentItems = 5
     layout = "background"
-    homepageImage = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80"
+    homepageImage = "https://images.unsplash.com/photo-1578632738980-430bb23e9e0c?auto=format&fit=crop&w=1600&q=80" # Anime-style background
+    showRecent = true
+    showRecentItems = 6
+    cardView = true # Enable Grid/Card layout
 
   # Header
   [params.header]
@@ -61,21 +62,15 @@ hasCJKLanguage = true # Better support for mixed languages
     showSearch = true
     showAppearanceSwitcher = true
 
-  # Footer
-  [params.footer]
-    showCopyright = true
-    showThemeAttribution = false
-    showRSS = true
-
-  # Profile
+  # Profile in Header
   [params.author]
     name = "Tea Master"
-    image = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=200&q=80"
-    headline = "Stay Good"
+    headline = "مهما كنت.. كن جيداً"
     links = [
       { telegram = "https://t.me/yourlink" },
       { discord = "https://discord.gg/yourlink" },
-      { github = "https://github.com/yourusername" }
+      { github = "https://github.com/yourusername" },
+      { x = "https://x.com/yourusername" }
     ]
 
   # Article features
@@ -84,9 +79,11 @@ hasCJKLanguage = true # Better support for mixed languages
     showViews = true
     showReadingTime = true
     showTags = true
+    showAuthors = true
     showRelatedPosts = true
     showLightbox = true
     showTableOfContents = true
+    showShare = true # Social sharing
 
   # Search
   [params.search]
@@ -95,10 +92,13 @@ hasCJKLanguage = true # Better support for mixed languages
     showInMobileMenu = true
     showInHeader = true
 
-  # Buy Me a Coffee
-  [params.buymeacoffee]
+  # PWA & SEO
+  [params.pwa]
     enable = true
-    identifier = "yourusername"
+  
+  [params.seo]
+    enable = true
+    useTwitterCard = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
