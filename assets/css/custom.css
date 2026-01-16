@@ -18,10 +18,10 @@ body {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background-image: url('https://images.unsplash.com/photo-1578632738980-430bb23e9e0c?auto=format&fit=crop&w=1600&q=80');
+    background-image: url('https://images.alphacoders.com/133/1331841.png');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.3);
+    filter: brightness(0.25);
 }
 
 /* Glassmorphism Cards */

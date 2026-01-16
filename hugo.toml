@@ -51,7 +51,7 @@ hasCJKLanguage = true
   # Homepage
   [params.homepage]
     layout = "background"
-    homepageImage = "https://images.unsplash.com/photo-1578632738980-430bb23e9e0c?auto=format&fit=crop&w=1600&q=80" # Anime-style background
+    homepageImage = "https://images.alphacoders.com/133/1331841.png" # Frieren Background
     showRecent = true
     showRecentItems = 6
     cardView = true # Enable Grid/Card layout
@@ -64,8 +64,8 @@ hasCJKLanguage = true
 
   # Profile in Header
   [params.author]
-    name = "Tea Master"
-    headline = "مهما كنت.. كن جيداً"
+    name = "Frieren"
+    headline = "الرحلة إلى إند (Ende) تبدأ من هنا"
     links = [
       { telegram = "https://t.me/yourlink" },
       { discord = "https://discord.gg/yourlink" },
