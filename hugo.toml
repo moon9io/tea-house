@@ -2,10 +2,17 @@ baseURL = "https://moon9io.github.io/tea-house/"
 title = "Tea House"
 theme = "blowfish"
 defaultContentLanguage = "ar"
-enableRobotsTXT = true
-buildDrafts = false
-buildFuture = false
-buildExpired = false
+enableEmoji = true
+hasCJKLanguage = true # Better support for mixed languages
+
+[pagination]
+  pagerSize = 10
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
 
 [languages]
   [languages.ar]
@@ -34,27 +41,36 @@ buildExpired = false
 
 [params]
   colorScheme = "blowfish"
-  # SEO & Social
-  description = "Tea House - A sanctuary for tech and peace"
-  images = ["images/og-image.jpg"]
-  
-  # Analytics (Optional)
-  # googleAnalytics = "G-XXXXXXXXXX"
-
-  # Extra Features
-  showTaxonomies = ["tags", "categories"]
-  showBreadcrumbs = true
-  showTableOfContents = true
-
-  defaultAppearance = "dark" # Default to dark mode for the rain effect aesthetic
+  defaultAppearance = "dark"
   autoSwitchAppearance = true
-  showScrollToTop = true
-  mainSections = ["posts"]
   
-  # Profile settings
+  # Layout settings
+  mainSections = ["posts"]
+  showScrollToTop = true
+  
+  # Homepage
+  [params.homepage]
+    showRecent = true
+    showRecentItems = 5
+    layout = "background"
+    homepageImage = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=80"
+
+  # Header
+  [params.header]
+    layout = "fixed"
+    showSearch = true
+    showAppearanceSwitcher = true
+
+  # Footer
+  [params.footer]
+    showCopyright = true
+    showThemeAttribution = false
+    showRSS = true
+
+  # Profile
   [params.author]
     name = "Tea Master"
-    image = "images/profile.jpg"
+    image = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=200&q=80"
     headline = "Stay Good"
     links = [
       { telegram = "https://t.me/yourlink" },
@@ -70,28 +86,14 @@ buildExpired = false
     showTags = true
     showRelatedPosts = true
     showLightbox = true
+    showTableOfContents = true
 
   # Search
   [params.search]
     enable = true
     type = "fuse"
     showInMobileMenu = true
-
-  # Giscus Comments
-  [params.giscus]
-    enable = true
-    repo = "yourusername/tea-house"
-    repoId = "YOUR_REPO_ID"
-    category = "Announcements"
-    categoryId = "YOUR_CATEGORY_ID"
-    mapping = "pathname"
-    strict = "0"
-    reactionsEnabled = "1"
-    emitMetadata = "0"
-    inputPosition = "bottom"
-    theme = "preferred_color_scheme"
-    lang = "en"
-    loading = "lazy"
+    showInHeader = true
 
   # Buy Me a Coffee
   [params.buymeacoffee]
@@ -100,3 +102,5 @@ buildExpired = false
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]

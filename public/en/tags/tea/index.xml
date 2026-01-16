@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tea on Tea House</title><link>https://moon9io.github.io/tea-house/en/tags/tea/</link><description>Recent content in Tea on Tea House</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2026 Tea Master</copyright><lastBuildDate>Fri, 16 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://moon9io.github.io/tea-house/en/tags/tea/index.xml" rel="self" type="application/rss+xml"/><item><title>Welcome to Tea House</title><link>https://moon9io.github.io/tea-house/en/posts/first-post/</link><pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate><guid>https://moon9io.github.io/tea-house/en/posts/first-post/</guid><description>&lt;p>Welcome to &lt;strong>Tea House&lt;/strong>. This blog is designed to be a peaceful sanctuary blending the philosophy of tranquility with the world of technology.&lt;/p>
+
+&lt;h2 class="relative group">Why Tea House?
+ &lt;div id="why-tea-house" class="anchor">&lt;/div>
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-tea-house" aria-label="Anchor">#&lt;/a>
+ &lt;/span>
+ 
+&lt;/h2>
+&lt;p>Tea is not just a drink; it&amp;rsquo;s a ritual of meditation. Here we will discuss:&lt;/p>
+&lt;ol>
+&lt;li>Web development with Hugo.&lt;/li>
+&lt;li>UX Design.&lt;/li>
+&lt;li>Philosophical and technical ideas.&lt;/li>
+&lt;/ol>
+&lt;blockquote>&lt;p>&amp;ldquo;Beauty lies in the simple details.&amp;rdquo;&lt;/p></description></item></channel></rss>
