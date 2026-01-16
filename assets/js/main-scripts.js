@@ -52,11 +52,52 @@ function initAudio() {
     };
 }
 
+function createPetal(e) {
+    for (let i = 0; i < 5; i++) {
+        const petal = document.createElement('div');
+        petal.className = 'petal';
+        petal.style.left = `${e.clientX}px`;
+        petal.style.top = `${e.clientY}px`;
+        petal.style.width = `${Math.random() * 10 + 5}px`;
+        petal.style.height = `${Math.random() * 10 + 5}px`;
+        document.body.appendChild(petal);
+        setTimeout(() => petal.remove(), 3000);
+    }
+}
+
+function updateGreeting() {
+    const greetingEl = document.getElementById('dynamic-greeting');
+    if (!greetingEl) return;
+    const hour = new Date().getHours();
+    let msg = "مرحباً بك في رحلتنا";
+    if (hour < 12) msg = "صباح الخير.. رحلة جديدة تبدأ";
+    else if (hour < 18) msg = "طاب يومك.. استمتع ببعض الشاي";
+    else msg = "مساء هادئ.. وقت مثالي للقراءة";
+    greetingEl.innerText = msg;
+}
+
 function initAll() {
     createRain();
     initAudio();
     handleImages();
+    updateGreeting();
     window.addEventListener('scroll', updateReadingProgress);
+    document.addEventListener('click', createPetal);
+    
+    // Ctrl+K Search
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            document.querySelector('.search-input')?.focus();
+        }
+    });
+
+    // Hide Loader
+    const loader = document.getElementById('magic-loader');
+    if (loader) {
+        setTimeout(() => loader.style.opacity = '0', 500);
+        setTimeout(() => loader.style.display = 'none', 1300);
+    }
 }
 
 // Initialize on load

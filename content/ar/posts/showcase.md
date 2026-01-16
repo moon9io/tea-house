@@ -31,7 +31,13 @@ showReadingTime: true
 ## 🎥 فيديو استعراضي
 شاهد هذا المقطع الجميل من عالم Frieren:
 
-{{< youtube id="qgQz_Y66p78" >}}
+{{< magic-box title="تنبيه سحري" >}}
+هذا الفيديو يتم تحميله بتقنية Lazy Loading لضمان سرعة خرافية للموقع!
+{{< /magic-box >}}
+
+<div class="video-container" style="aspect-ratio: 16/9; overflow: hidden; border-radius: 1rem; border: 1px solid var(--glass-border);">
+    <iframe src="https://www.youtube.com/embed/qgQz_Y66p78" loading="lazy" style="width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+</div>
 
 ## ⛩️ الخاتمة
 هذه المدونة ليست مجرد موقع، بل هي رحلة. نأمل أن تستمتعوا بكل تفصيل قمنا ببنائه.
