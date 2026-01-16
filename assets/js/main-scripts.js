@@ -52,15 +52,20 @@ function initAudio() {
     };
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAll() {
     createRain();
     initAudio();
     handleImages();
     window.addEventListener('scroll', updateReadingProgress);
-});
+}
 
-// Re-init on navigation
-window.addEventListener('popstate', () => {
-    createRain();
-    handleImages();
-});
+// Initialize on load
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initAll();
+} else {
+    document.addEventListener('DOMContentLoaded', initAll);
+}
+
+// Re-init on navigation (for SPAs or Turbo links)
+window.addEventListener('popstate', initAll);
+window.addEventListener('load', initAll);
