@@ -207,3 +207,43 @@ body {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
 }
+
+/* Category Badges Styling */
+.badge-category {
+    background: var(--frieren-purple-soft) !important;
+    color: var(--frieren-purple) !important;
+    border: 1px solid var(--frieren-purple) !important;
+    padding: 2px 10px !important;
+    border-radius: 20px !important;
+    font-size: 0.75rem !important;
+    font-weight: bold !important;
+}
+
+/* Enhanced Card Layout */
+.card-title {
+    color: var(--frieren-white) !important;
+    font-weight: 700 !important;
+    margin-top: 0.5rem !important;
+}
+
+.card-summary {
+    font-size: 0.9rem !important;
+    opacity: 0.8 !important;
+    line-height: 1.6 !important;
+}
+
+/* Timeline Style for Journey Category */
+.timeline-item {
+    border-right: 2px solid var(--frieren-purple);
+    padding-right: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '✨';
+    position: absolute;
+    right: -12px;
+    top: 0;
+    background: #0a0a0a;
+}

@@ -109,3 +109,37 @@ hasCJKLanguage = true
   home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS"]
   page = ["HTML"]
+
+[[languages.ar.menu.main]]
+  name = "الرحلة"
+  url = "/categories/%D8%A7%D9%84%D8%B1%D8%AD%D9%84%D8%A9"
+  weight = 10
+[[languages.ar.menu.main]]
+  name = "تقنية"
+  url = "/categories/%D8%AA%D9%82%D9%86%D9%8A%D8%A9"
+  weight = 20
+[[languages.ar.menu.main]]
+  name = "أنمي"
+  url = "/categories/%D8%A3%D9%86%D9%85%D9%8A"
+  weight = 30
+[[languages.ar.menu.main]]
+  name = "شاي"
+  url = "/categories/%D8%B4%D8%A7%D9%8A"
+  weight = 40
+
+[[languages.en.menu.main]]
+  name = "Journey"
+  url = "/en/categories/journey"
+  weight = 10
+[[languages.en.menu.main]]
+  name = "Tech"
+  url = "/en/categories/tech"
+  weight = 20
+[[languages.en.menu.main]]
+  name = "Anime"
+  url = "/en/categories/anime"
+  weight = 30
+[[languages.en.menu.main]]
+  name = "Tea"
+  url = "/en/categories/tea"
+  weight = 40
