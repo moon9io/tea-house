@@ -85,11 +85,40 @@ function showAchievement(name) {
     setTimeout(() => toast.style.right = '-300px', 5000);
 }
 
+function initRandomPost() {
+    const btn = document.getElementById('random-post-btn');
+    if (!btn) return;
+    btn.onclick = () => {
+        fetch('/index.json')
+            .then(res => res.json())
+            .then(data => {
+                const posts = data.filter(item => item.section === 'posts');
+                const random = posts[Math.floor(Math.random() * posts.length)];
+                window.location.href = random.permalink;
+            });
+    };
+}
+
+function initClap() {
+    const btn = document.getElementById('clap-btn');
+    if (!btn) return;
+    let count = parseInt(localStorage.getItem('clap_count') || '0');
+    btn.onclick = (e) => {
+        count++;
+        localStorage.setItem('clap_count', count);
+        createPetal(e); // Reuse petal effect for claps
+        btn.querySelector('.clap-count').innerText = count;
+        if (count === 10) showAchievement('معجب حقيقي!');
+    };
+}
+
 function initAll() {
     createRain();
     initAudio();
     handleImages();
     updateGreeting();
+    initRandomPost();
+    initClap();
     
     // Show achievement on first click
     document.addEventListener('click', () => {

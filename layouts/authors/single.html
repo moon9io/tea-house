@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-12">
+    <div class="max-w-4xl mx-auto">
+        <!-- Adventurer Card -->
+        <div class="card p-8 relative overflow-hidden" style="background: var(--glass-bg); backdrop-filter: var(--glass-blur); border: 2px solid var(--frieren-purple); border-radius: 2rem;">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <!-- Avatar -->
+                <div class="relative">
+                    <img src="{{ .Params.image | default "https://api.dicebear.com/7.x/avataaars/svg?seed=Frieren" }}" alt="{{ .Title }}" class="w-48 h-48 rounded-full border-4 border-frieren-purple object-cover">
+                    <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-frieren-purple px-4 py-1 rounded-full text-sm font-bold">LVL {{ len .Pages }}</div>
+                </div>
+                
+                <!-- Stats -->
+                <div class="flex-1 text-center md:text-right">
+                    <h1 class="text-4xl font-bold mb-2">{{ .Title }}</h1>
+                    <p class="text-xl opacity-80 mb-4">{{ .Params.description }}</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                            <div class="text-sm opacity-60">التعاويذ (المقالات)</div>
+                            <div class="text-2xl font-bold">{{ len .Pages }}</div>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                            <div class="text-sm opacity-60">الرتبة</div>
+                            <div class="text-2xl font-bold">ساحر من الدرجة الأولى</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold mb-4 border-b border-frieren-purple pb-2">المهارات السحرية (Skill Set)</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-frieren-purple/20 border border-frieren-purple rounded-lg">Zoltraak (Backend)</span>
+                    <span class="px-4 py-2 bg-frieren-purple/20 border border-frieren-purple rounded-lg">Illusion Magic (Frontend)</span>
+                    <span class="px-4 py-2 bg-frieren-purple/20 border border-frieren-purple rounded-lg">Flight Magic (Deployment)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Author's Posts -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold mb-8">سجل الرحلات (المقالات)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {{ range .Pages }}
+                    {{ partial "article-link.html" . }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

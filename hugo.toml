@@ -13,6 +13,7 @@ hasCJKLanguage = true
   category = "categories"
   author = "authors"
   series = "series"
+  encyclopedia = "encyclopedia"
 
 [languages]
   [languages.ar]
@@ -83,7 +84,23 @@ hasCJKLanguage = true
     showRelatedPosts = true
     showLightbox = true
     showTableOfContents = true
-    showShare = true # Social sharing
+    showShare = true
+    showGiscus = true # Enable Giscus
+
+  # Giscus Configuration
+  [params.giscus]
+    repo = "moon9io/tea-house"
+    repoId = "R_kgDONv_f4A" # Placeholder - user needs to update this
+    category = "Announcements"
+    categoryId = "DIC_kwDONv_f4M4Cmf6h" # Placeholder
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "top"
+    theme = "transparent_dark"
+    lang = "ar"
+    loading = "lazy"
 
   # Search
   [params.search]

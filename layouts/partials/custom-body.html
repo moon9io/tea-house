@@ -7,6 +7,11 @@
 
 <div id="dynamic-greeting" style="position: fixed; top: 80px; left: 50%; transform: translateX(-50%); z-index: 100; font-size: 0.9rem; opacity: 0.8; pointer-events: none;"></div>
 
+<!-- Random Post Button in Header (Fixed Position) -->
+<div style="position: fixed; top: 20px; left: 200px; z-index: 1001;">
+    <button id="random-post-btn" title="مقال عشوائي" style="background: var(--glass-bg); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 1.2rem;">🔮</button>
+</div>
+
 <!-- Audio Player -->
 <div class="audio-player-container">
     <button id="music-toggle" title="Play/Pause Music">🎵</button>
@@ -19,6 +24,14 @@
 <!-- Floating Back to Top -->
 <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     <span style="font-size: 1.5rem;">⛩️</span>
+</div>
+
+<!-- Clap Button (Floating or End of Post) -->
+<div id="clap-container" style="position: fixed; bottom: 30px; right: 100px; z-index: 1000;">
+    <button id="clap-btn" style="background: var(--glass-bg); backdrop-filter: var(--glass-blur); border: 1px solid var(--frieren-purple); border-radius: 50%; width: 60px; height: 60px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: transform 0.2s;">
+        <span style="font-size: 1.5rem;">👏</span>
+        <span class="clap-count" style="font-size: 0.7rem; font-weight: bold; color: var(--frieren-purple);">0</span>
+    </button>
 </div>
 
 <!-- Simple Achievement System -->
